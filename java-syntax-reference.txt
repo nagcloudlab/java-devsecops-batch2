@@ -1,0 +1,211 @@
+
+
+-----------------------------------------------------------------
+1. java project
+-----------------------------------------------------------------
+
+project
+|
+|--- package1 ( .java / .class )
+|
+|--- package2
+| |
+| |--- package2_1
+
+
+-----------------------------------------------------------------
+2. Java File
+-----------------------------------------------------------------
+
+PublicType.java
+--------------------------------------------
+|package package1 ( 0 or 1 )
+|import statements ( 0 or more )
+|
+|public Type  ( interface, class, enum, annotation ) (1)
+|
+|other types ( interface, class, enum, annotation ) ( 0 or more )
+|--------------------------------------------
+
+
+-----------------------------------------------------------------
+2. package declaration
+-----------------------------------------------------------------
+
+why we need package?
+- to avoid name conflicts
+- to control access
+- to organize files
+- to make it easier to locate and use classes, interfaces, and sub-packages
+
+recommendation for package name
+
+File: UPITransferService.java
+module: service
+project: upi
+company: npci
+type : commercial
+
+package company-type.company-name.project-name.module-name;
+package com.npci.upi.service;
+
+-----------------------------------------------------------------
+3. import statement
+-----------------------------------------------------------------
+
+when to use import statement?
+- when you want to use a class, interface, or enum from another package
+
+project
+|
+|--- package1 ( A , B)
+| 
+|--- package2 ( C, D )
+| |
+| |--- package2_1 ( E )
+| |
+|--- package3 ( C )
+
+
+
+e,g A.java
+
+package package1;
+
+//import package2.C; // import class C from package2
+//import package2.D; // import class D from package2
+
+// or
+
+import package2.*; 
+import package2.package2_1.E; 
+import package3.*; 
+public class A {
+    B b;
+    package3.C c;
+    D d;
+    E e;
+}
+
+
+-----------------------------------------------------------------
+object
+-----------------------------------------------------------------
+
+what is object?
+
+  - info/data/properties/attributes/fields => state
+  - functionality/methods => behavior
+  - localtion/address/reference => identity
+
+  object = (state + behavior) + identity ( sbi )
+
+  to create similar objects, we need a blueprint
+    - interface
+    - class
+    - enum
+    - annotation
+    - record ( java 14+ )
+
+-----------------------------------------------------------------
+object's concepts
+-----------------------------------------------------------------
+
+1. Abstraction | Interface | object's front-end  => Interface
+
+    -> easy to use/learn by dependent
+    -> hide the implementation details
+    -> show only the necessary details
+
+ 2. Encapsulation | Impementation | object's back-end => class
+
+    -> hide internal details
+    -> hide the complexity
+
+ 3. Inheritance | is-a relationship
+
+    -> re-use the code, from generized-type to specialized-types
+
+ 4. Polymorphism | many forms
+
+    -> based on input/context, tyr do same behavior in different ways
+
+ 5. Composition | has-a relationship
+
+    -> build complex objects from simpler ones
+
+
+-----------------------------------------------------------------
+4. interface
+-----------------------------------------------------------------
+
+// java-top-level coding is writing an interface for other developers
+
+_________ interface Name [extends Interface1, Interface2, ...] {
+[public]        1. constant data [0-n]
+[      ]        2. abstract methods [0-n]
+                java 8+ {
+                    3. default methods [0-n]
+                    4. static methods [0-n]
+                }
+                java 9+ {
+                    5. private methods [0-n]
+                }
+            }
+
+imp-note : we can't create an object of an interface
+
+-----------------------------------------------------------------
+5. class  -> implementation of an interface
+-----------------------------------------------------------------
+
+abstract class LivingThing{}
+class Human extends LivingThing{}
+class Male extends Human{}
+class Kid extends Human{}
+class Animal extends LivingThing{}
+
+
+_________  ___________ class Name [extends SuperClass] [implements Interface1, Interface2, ...] {
+[public ]   [abstract]      // 1. variables ( data holders)
+[       ]   [final]         // 2. constructors ( object creation)
+            [strictfp]      // 3. methods ( behavior )
+                            // 4. inner classes ( nested classes)
+-------------------------------            
+[private]   [static]
+[protected]            
+[         ]
+[public]            
+            }
+
+------------------------------------------------------------------------
+5. variables
+------------------------------------------------------------------------
+
+Why we need ?
+-> to store data
+
+based on Type,
+------------------------------
+1. value ( age, balance, height ) ==> primitives
+    e.g int age=42
+2. object ( Account, Person )     ==> reference  ( interface , class, enum , annotation )
+    e.g Account a1=new Account()
+
+based on Scope,
+------------------------------
+1. static / class variable
+2. instance / object variable
+3. local variable
+
+
+
+_______     _________ Type varName; = [value | object's ref]
+[public]    [static]
+[      ]    [final]
+[protected] [transient]
+[private ]  [volatile] 
+
+LocalVariable
+----------------------
+Nil          [final]

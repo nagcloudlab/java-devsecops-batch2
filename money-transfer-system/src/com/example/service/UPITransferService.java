@@ -35,11 +35,31 @@ import com.example.repository.AccountRepositoryFactory;
     => dont create & get from factory , inject by manager ( depedency inversion principle )
 
 
+
+    -------------------------------------------------------
+    SOLID principles
+    -------------------------------------------------------
+
+
+    S - Single Responsibility Principle
+        => class should have only one reason to change
+    O - Open/Closed Principle
+        => class should be open for extension but closed for modification
+    L - Liskov Substitution Principle
+        => derived class should be substitutable for base class
+    I - Interface Segregation Principle
+        => client should not be forced to depend on interfaces it does not use
+    D - Dependency Inversion Principle
+        => high level module should not depend on low level module, both should depend on abstractions
+        => abstractions should not depend on details, details should depend on abstractions
+
+
+
  */
 
 public class UPITransferService {
 
-    private AccountRepository accountRepository;
+    private AccountRepository accountRepository; // has-a dependency
 
     // constructor injection
     public UPITransferService(AccountRepository accountRepository) {
