@@ -6,10 +6,10 @@ import com.example.model.Account;
  * author: John Doe
  */
 
-public class MysqlAccountRepository {
+public class MySQLAccountRepository implements AccountRepository {
 
-    public MysqlAccountRepository() {
-        System.out.println("CassandraAccountRepository component created");
+    public MySQLAccountRepository() {
+        System.out.println("MySQLAccountRepository component created");
     }
 
     public Account loadAccount(String accountId) {

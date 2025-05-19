@@ -3,10 +3,10 @@ package com.example.repository;
 import com.example.model.Account;
 
 /**
- * author: John Doe
+ * author: Jane Doe
  */
 
-public class PostgreSQLAccountRepository {
+public class PostgreSQLAccountRepository implements AccountRepository {
 
     public PostgreSQLAccountRepository() {
         System.out.println("PostgresAccountRepository component created");
