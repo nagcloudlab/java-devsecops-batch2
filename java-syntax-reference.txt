@@ -209,3 +209,133 @@ _______     _________ Type varName; = [value | object's ref]
 LocalVariable
 ----------------------
 Nil          [final]
+
+
+
+-----------------------------------------------------------------
+6. constructor
+-----------------------------------------------------------------
+
+in java, creating object is 2 steps
+
+1. allocate memory for the object => new keyword
+2. initialize the object => constructor
+
+syntax:
+
+________    ClassName( arg1, arg2, ... ) {
+[public    ]        // object initialization logic
+[private   ]
+[protected ]
+[          ]
+               }
+
+
+new ClassName() => default values
+new ClassName( arg1, arg2, ... ) => user-defined values
+
+
+-------------------------------------------------------------------
+7. methods
+-------------------------------------------------------------------
+
+- any functionality of an object
+- a method is a block of code that performs a specific task
+
+
+ReturnType
+-----------
+
+- primitive types ( int, char, boolean, byte, short, long, float, double )
+- reference types ( interface, class, enum, annotation )
+- void ( no return value )
+
+
+
+__________ _____________ ReturnType methodName( arg1, arg2, ... ) [throws Exception1, Exception2, ...] {
+[private  ][static      ]    // method logic
+[protected][final       ]    // Arithmetic | Relational | Logical  | Assignment
+[         ][synchronized]    // Conditional
+[public   ]                  // Looping
+                             // Invoke other methods
+                             [return] result;
+                        }
+
+---------------------------------------------------------
+8. enum
+---------------------------------------------------------
+
+// enum is a special type of class
+// enum is a collection of constants
+
+e.g types of accounts
+public enum AccountType {
+    SAVINGS,
+    CURRENT,
+}
+e.g transaction types
+public enum TransactionType {
+    DEPOSIT,
+    WITHDRAW,
+    TRANSFER,
+    FEE,
+    REFUND,
+    INTEREST,
+}
+
+-----------------------------------------------------------
+9. annotation
+-----------------------------------------------------------
+
+
+what is annotation?
+- metadata about the code
+- used to provide additional information about the code
+- framework | compiler | code-gen-tools generate/configure your-code based annotation
+
+
+
+e.g Spring F,W
+@interface RequestMapping {
+    String url()
+}
+
+
+// Your code
+class TransferController{
+    @RequestMapping(url="/bank1/transfer")
+    public void transfer(String fromAccount, String toAccount, double amount) {
+        // transfer logic
+    }
+}
+
+
+-----------------------------------
+java naming conventions
+-----------------------------------
+
+1. package name
+   - all lowercase
+   - use dot (.) to separate words
+   - use company name as prefix
+2. Type name ( class, interface, enum, annotation)
+   - first letter of each word should be capitalized ( Pascal case )
+      e.g UPITransferService, AccountType, AccountRepository
+3. variable/method name
+    - from second word, first letter should be capitalized ( camel case )
+      e.g accountNumber, getAccountNumber
+4. constant name
+    - all uppercase
+    - use underscore (_) to separate words
+      e.g MAX_BALANCE, MIN_BALANCE
+5. keyword
+    - all lowercase
+      e.g public, private, protected, static, final, synchronized, volatile
+
+-------------------------------
+
+
+
+
+
+
