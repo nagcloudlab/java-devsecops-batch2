@@ -24,9 +24,9 @@ project
    - E
 
 -------------------------------------------------------------------------------
-                    same-package                   | other-package
+                    same-package                         | other-package
 -------------------------------------------------------------------------------
-               same-type | sub-type | other-type   |   sub-type | other-type
+               same-type | sub-type | other-type         |   sub-type | other-type
 -------------------------------------------------------------------------------
 private        |   yes     |    no        |     no       |    no      |    no
 default        |   yes     |    yes       |     yes      |    no      |    no

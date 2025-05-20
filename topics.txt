@@ -5,5 +5,5 @@
 - data-types
 - abstraction & encapsulation ( imp )
     - access-modifiers
-    - accessors & mutators
+    - accessors & mutators ( aka getters & setters )
     - interfaces
