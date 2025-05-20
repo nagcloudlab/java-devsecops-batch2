@@ -1,3 +1,9 @@
 
 - use-case to java-application
 - java-syntax-reference
+
+- data-types
+- abstraction & encapsulation ( imp )
+    - packages & access-modifiers
+    - accessors & mutators
+    - interfaces
