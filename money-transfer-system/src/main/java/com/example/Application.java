@@ -1,4 +1,4 @@
-package example;
+package com.example;
 
 import com.example.repository.AccountRepository;
 import com.example.repository.AccountRepositoryFactory;

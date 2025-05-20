@@ -1,4 +1,4 @@
-package example.service;
+package com.example.service;
 
 import com.example.model.Account;
 import com.example.repository.AccountRepository;
