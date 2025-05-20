@@ -1,8 +1,7 @@
-package com.example.service;
+package example.service;
 
 import com.example.model.Account;
 import com.example.repository.AccountRepository;
-import com.example.repository.AccountRepositoryFactory;
 
 /*
 

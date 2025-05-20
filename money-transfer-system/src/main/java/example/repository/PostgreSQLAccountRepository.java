@@ -1,15 +1,15 @@
-package com.example.repository;
+package example.repository;
 
 import com.example.model.Account;
 
 /**
- * author: John Doe
+ * author: Jane Doe
  */
 
-public class MySQLAccountRepository implements AccountRepository {
+public class PostgreSQLAccountRepository implements AccountRepository {
 
-    public MySQLAccountRepository() {
-        System.out.println("MySQLAccountRepository component created");
+    public PostgreSQLAccountRepository() {
+        System.out.println("PostgresAccountRepository component created");
     }
 
     public Account loadAccount(String accountId) {

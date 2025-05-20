@@ -1,4 +1,4 @@
-package com.example.repository;
+package example.repository;
 
 public class AccountRepositoryFactory {
 
