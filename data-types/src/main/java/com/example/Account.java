@@ -31,8 +31,6 @@ public class Account {
         System.out.println("Account object created with accountId: " + accountId + " and balance: " + balance);
     }
 
-    // Behavior
-
     public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Deposit amount must be greater than 0");

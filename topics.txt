@@ -4,6 +4,6 @@
 
 - data-types
 - abstraction & encapsulation ( imp )
-    - packages & access-modifiers
+    - access-modifiers
     - accessors & mutators
     - interfaces
