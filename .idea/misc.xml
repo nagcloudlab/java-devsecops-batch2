@@ -12,7 +12,13 @@
         <option value="$PROJECT_DIR$/inheritance-I/pom.xml" />
         <option value="$PROJECT_DIR$/inheritance-II/pom.xml" />
         <option value="$PROJECT_DIR$/interface_abstract_class/pom.xml" />
+        <option value="$PROJECT_DIR$/object_patterns/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/accessors-mutators/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
