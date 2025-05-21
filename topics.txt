@@ -1,9 +1,35 @@
 
 - use-case to java-application
 - java-syntax-reference
-
 - data-types
 - abstraction & encapsulation ( imp )
     - access-modifiers
     - accessors & mutators ( aka getters & setters )
     - interfaces
+- inheritance
+    - super keyword
+    - method-overriding
+    - polymorphism
+- design pattern(s)
+- exception-handling
+    - try-catch-finally
+    - throw-throws
+    - custom-exceptions
+-----------------------------------------------
+- collections
+    - list
+    - set
+    - map
+-------------------------------------------------
+- Functions
+    - lambda-expressions
+    - functional-interfaces
+    - method-references
+    - streams
+-------------------------------------------------
+- Concurrency
+    - threads
+    - synchronization
+    - thread-pools
+    - concurrent-collections
+-------------------------------------------------

@@ -15,7 +15,7 @@ public class DriveApplication {
         car.move();
         System.out.println();
         car.move();
-
+        System.out.println();
         //----
 
         wheel = new CEATWheel();
