@@ -40,7 +40,7 @@ class Configuration {
 }
 
 
-public class Problem1 {
+public class SingletonExample {
 
     public static void main(String[] args) {
 
