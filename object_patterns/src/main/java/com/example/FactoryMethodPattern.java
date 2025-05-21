@@ -20,7 +20,8 @@ class DatabaseConnectionFactory {
             // URL
             // username
             // password
-            return new PostgresConnection(); // Upcasting ( postgresConnection is a Connection )
+            PostgresConnection pc = new PostgresConnection();
+            return pc; // Upcasting ( postgresConnection is a Connection )
         } else if (dbType.equals("cassandra")) {
             return new CassandraConnection();
         } else {
