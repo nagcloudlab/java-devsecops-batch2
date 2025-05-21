@@ -57,7 +57,7 @@ class Customer {
 }
 
 
-public class Problem {
+public class BuilderPatternExample {
 
     public static void main(String[] args) {
 
