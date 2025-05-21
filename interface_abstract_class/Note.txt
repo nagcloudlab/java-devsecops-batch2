@@ -1,0 +1,53 @@
+
+
+interface vs abstract_class
+--------------------------------
+
+
+similarities
+-------------
+
+Interface:
+
+    -> cant't be instantiated
+    -> can hold only abstract methods ( before java-8 )
+    -> can have abstract-methods + default methods ( after java-8 )
+
+Abstract class:
+
+    -> can't be instantiated
+    -> can have abstract methods + concrete methods
+
+differences
+----------------
+
+Interface:
+
+    -> no constructor
+    -> all variables are public static final ( i,e constants )
+
+Abstract class:
+
+    -> can have constructor
+    -> can have mutable & immutable variables
+
+------------------------------------------------------------
+how/when to choose between interface and abstract class
+------------------------------------------------------------
+
+
+top/design/api-level:  interfaces              ==> 100% abstraction about your module
+middle-level: abstract classes ( optional )    ==> partial abstraction about your module
+bottom/implementation-level: concrete classes  ==> 100% implementation about your module
+
+
+
+------------------------------------------------------------
+
+e.g Collection Framework
+
+top-level: Collection interface
+middle-level: abstract classes like AbstractCollection,AbstractList
+bottom-level: concrete classes like ArrayList,LinkedList
+
+------------------------------------------------------------
