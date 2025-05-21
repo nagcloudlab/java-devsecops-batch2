@@ -1,6 +1,7 @@
 package com.example;
 
 class Customer {
+
     private long customerId; // Required
     private String name; // Required
     private String email; // Optional
@@ -16,14 +17,14 @@ class Customer {
     }
 
 
-    public static class CustomerBuilder {
+    public static class Builder {
         private long customerId; // Required
         private String name; // Required
         private String email; // Optional
         private String phoneNumber; // Optional
         private String address; // Optional
 
-        public CustomerBuilder(long customerId, String name) {
+        public Builder(long customerId, String name) {
             if (customerId <= 0) {
                 throw new IllegalArgumentException("Customer ID must be positive");
             }
@@ -34,17 +35,17 @@ class Customer {
             this.name = name;
         }
 
-        public CustomerBuilder setEmail(String email) {
+        public Builder setEmail(String email) {
             this.email = email;
             return this;
         }
 
-        public CustomerBuilder setPhoneNumber(String phoneNumber) {
+        public Builder setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
-        public CustomerBuilder setAddress(String address) {
+        public Builder setAddress(String address) {
             this.address = address;
             return this;
         }
@@ -61,14 +62,21 @@ public class BuilderPatternExample {
 
     public static void main(String[] args) {
 
-        Customer customer1 = new Customer.CustomerBuilder(1, "A").build();
-        Customer customer2 = new Customer.CustomerBuilder(1, "A")
+        Customer customer1 = new Customer.Builder(1, "A").build();
+        Customer customer2 = new Customer.Builder(1, "A")
                 .setEmail("email")
                 .build();
-        Customer customer3 = new Customer.CustomerBuilder(1, "A")
+
+        Customer customer3 = new Customer.Builder(1, "A")
                 .setPhoneNumber("phone")
                 .setEmail("email")
                 .build();
+
+        Customer.Builder customerBuilder=new Customer.Builder(1, "A");
+        Customer customer4 = customerBuilder.build();
+        customerBuilder.setEmail("email");
+        customerBuilder.setPhoneNumber("phone");
+        System.out.println(customer4);
 
     }
 
