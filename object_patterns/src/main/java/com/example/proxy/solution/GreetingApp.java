@@ -78,8 +78,9 @@ class GreetingProxy implements IGreeting {
 public class GreetingApp {
     public static void main(String[] args) {
 
-        Greeting greeting = new Greeting();  // target
-        GreetingProxy greetingProxy = new GreetingProxy(greeting);
+
+        var greeting = new Greeting();  // target
+        var greetingProxy = new GreetingProxy(greeting);
 
         //------------------------------
         // Inside Module
