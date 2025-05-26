@@ -23,6 +23,7 @@ public class MapExample {
         Map<Owner, Car> map = new HashMap<>();
         map.put(owner1, car1);
         map.put(owner2, car2);
+        map.put(new Owner("sita", "delhi"), new Car("Mercedes", "C-Class", 2022));
 
         //-----------------------------------------------------
 
