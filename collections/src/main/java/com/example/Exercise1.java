@@ -29,7 +29,7 @@ public class Exercise1 {
                 return Integer.compare(o1.getCalories(), o2.getCalories());
             }
         }
-        Collections.sort(filteredMenu, new CalComparator());
+        filteredMenu.sort(new CalComparator());
         // step-3 : extract dish name into new list
         List<String> dishNames = new ArrayList<>();
         for (Dish dish : filteredMenu) {
