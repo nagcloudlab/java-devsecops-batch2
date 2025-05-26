@@ -14,11 +14,14 @@
         <option value="$PROJECT_DIR$/interface_abstract_class/pom.xml" />
         <option value="$PROJECT_DIR$/object_patterns/pom.xml" />
         <option value="$PROJECT_DIR$/exceptions/pom.xml" />
+        <option value="$PROJECT_DIR$/generics/pom.xml" />
+        <option value="$PROJECT_DIR$/collections/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/accessors-mutators/pom.xml" />
+        <option value="$PROJECT_DIR$/generics/pom.xml" />
       </set>
     </option>
   </component>
