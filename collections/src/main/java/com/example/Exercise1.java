@@ -21,6 +21,7 @@ public class Exercise1 {
                 filteredMenu.add(dish);
             }
         }
+
         // step-2 : sort by cal
         class CalComparator implements Comparator<Dish> {
             @Override
