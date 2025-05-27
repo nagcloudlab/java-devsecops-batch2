@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="collections" />
+        <module name="lambda-expression" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="access-modifiers" target="17" />
       <module name="accessors-mutators" target="17" />
+      <module name="collections" target="17" />
       <module name="data-types" target="17" />
       <module name="exceptions" target="17" />
       <module name="generics" target="17" />
