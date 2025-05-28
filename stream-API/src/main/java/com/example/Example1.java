@@ -13,7 +13,7 @@ package com.example;
     -> grouping
     -> aggregation - min, max, sum, average, count
     -> collecting - collect the results into a collection, like List, Set, Map, etc.
-    .....
+    .....x
 
  */
 
@@ -52,7 +52,8 @@ public class Example1 {
                 .stream()
                 .filter(dish -> dish.getCalories() < 400)
                 .sorted((d1, d2) -> Integer.compare(d1.getCalories(), d2.getCalories()))
-                .map(d -> d.getName())
+                //.map(d -> d.getName())
+                .map(Dish::getName) // method reference
                 .collect(Collectors.toList());
     }
 

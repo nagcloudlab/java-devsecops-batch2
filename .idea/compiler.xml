@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lambda-expression" />
         <module name="stream-API" />
       </profile>
     </annotationProcessing>
@@ -21,6 +20,7 @@
       <module name="inheritance-II" target="17" />
       <module name="interface" target="17" />
       <module name="interface_abstract_class" target="17" />
+      <module name="lambda-expression" target="17" />
       <module name="money-transfer-system" target="17" />
       <module name="object_patterns" target="17" />
     </bytecodeTargetLevel>
