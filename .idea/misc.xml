@@ -15,7 +15,7 @@
         <option value="$PROJECT_DIR$/object_patterns/pom.xml" />
         <option value="$PROJECT_DIR$/exceptions/pom.xml" />
         <option value="$PROJECT_DIR$/generics/pom.xml" />
-        <option value="$PROJECT_DIR$/stream-API/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
