@@ -1,0 +1,24 @@
+
+
+
+
+- how to define data -> object
+- how to store data -> collections
+- how to process data in functional style -> lambda functions & stream
+-> how to process data concurrently & parallel -> multiple-threads
+
++
+
+-> how tlo oraganize code following SOLID Principles & Patterns
+
+-> Framework -> spring
+
+--------------------------------
+
+
+- code analysis -> static code analysis tools
+-> testing
+-> build    
+-> java sec
+-> JVM performance tuning
+- how to deploy -> docker, kubernetes
