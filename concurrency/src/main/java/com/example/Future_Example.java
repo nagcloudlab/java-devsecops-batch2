@@ -9,7 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
-public class CallableTask_Example {
+public class Future_Example {
     public static void main(String[] args) {
 
         Callable<List<String>> callableTask = () -> {
