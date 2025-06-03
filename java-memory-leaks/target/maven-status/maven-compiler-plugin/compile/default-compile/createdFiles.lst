@@ -1,0 +1,5 @@
+com/example/main/ProcessCustomerTask.class
+com/example/main/GenerateCustomerTask.class
+com/example/main/Customer.class
+com/example/main/CustomerHarness.class
+com/example/main/CustomerManager.class
