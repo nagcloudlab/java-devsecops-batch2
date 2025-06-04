@@ -3,3 +3,13 @@ https://nagcloudlab.notion.site/java-devsecops-1f85bab9bf8780e7bb92eb3b298c058a?
 
 
 https://nagcloudlab.notion.site/npci-java-dev-sec-ops-2005bab9bf8780c982aced1d68354188?source=copy_link
+
+
+
+Maven PPT
+https://www.slideshare.net/slideshow/an-introduction-to-maven/12787488?from_search=3
+
+
+
+DevSecOps
+https://nagcloudlab.notion.site/npci-java-dev-sec-ops-2005bab9bf8780c982aced1d68354188?source=copy_link
