@@ -1,6 +1,6 @@
 
 
-install openjdk 17 on ubuntu
+### install openjdk-17 on ubuntu
 
 ```bash
 sudo apt update
@@ -8,7 +8,7 @@ sudo apt install openjdk-17-jdk
 java -version
 ```
 
-install maven on ubuntu
+### install maven on ubuntu
 
 ```bash
 sudo apt update
@@ -23,7 +23,7 @@ mvn clean install
 ```
 
 
-docker setup on ubuntu
+### install docker on ubuntu
 
 ```bash
 docker --version
@@ -35,9 +35,26 @@ apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo systemctl status docker
 sudo usermod -aG docker ${USER}
-docker version
+docker --version
 ```
 
+
+### create PostgreSQL database container
+
+```bash
+docker run --name postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+docker container ls
+docker exec -it postgres psql -U postgres
+
+CREATE TABLE ACCOUNT (
+    number VARCHAR(100) NOT NULL,
+    balance DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO ACCOUNT (number, balance) VALUES ('123456789', 1000.00);
+INSERT INTO ACCOUNT (number, balance) VALUES ('987654321', 500.00);
+
+```
 
 
 
