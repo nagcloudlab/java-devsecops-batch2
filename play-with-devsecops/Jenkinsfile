@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'Packaging the project...'
                 dir('play-with-devsecops') {
-                    sh 'mvn package'
+                    sh 'mvn install'
                 }
             }
         }
