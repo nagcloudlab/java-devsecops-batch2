@@ -46,17 +46,32 @@ docker run --name postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgr
 docker container ls
 docker exec -it postgres psql -U postgres
 
-CREATE TABLE ACCOUNT (
+CREATE TABLE ACCOUNTS (
     number VARCHAR(100) NOT NULL,
     balance DECIMAL(10, 2) NOT NULL
 );
 
-INSERT INTO ACCOUNT (number, balance) VALUES ('123456789', 1000.00);
-INSERT INTO ACCOUNT (number, balance) VALUES ('987654321', 500.00);
+INSERT INTO ACCOUNT (number, balance) VALUES ('1234567890', 1000.00);
+INSERT INTO ACCOUNT (number, balance) VALUES ('0987654321', 500.00);
 
 ```
 
 
+
+### create sonarqube container
+
+```bash
+docker run -d --name sonarqube -p 9000:9000 sonarqube:lts
+```
+
+### submit the project to sonarqube
+
+```bash
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=play-with-devsecops \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=sqa_9f1c7a4e32b56e932d0136136ceab01af973e951
+```  
 
 
 ### run the application

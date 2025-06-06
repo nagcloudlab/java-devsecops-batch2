@@ -1,0 +1,4 @@
+com/example/UPITransferServiceTest.class
+com/example/UPITransferServiceApiTest.class
+com/example/UPITransferServiceIntegrationTest.class
+com/example/BaseTransferApiTest.class

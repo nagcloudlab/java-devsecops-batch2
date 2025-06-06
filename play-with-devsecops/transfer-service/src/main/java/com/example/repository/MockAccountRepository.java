@@ -2,12 +2,15 @@
 package com.example.repository;
 
 import com.example.model.Account;
-import org.springframework.stereotype.Repository;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Repository
+@Component
+@Qualifier("mockAccountRepository")
 public class MockAccountRepository implements AccountRepository {
 
     private final Map<String, Account> accountStore = new ConcurrentHashMap<>();
@@ -24,7 +27,7 @@ public class MockAccountRepository implements AccountRepository {
     }
 
     @Override
-    public void save(Account account) {
+    public void updateAccount(Account account) {
         accountStore.put(account.getNumber(), account);
     }
 }
