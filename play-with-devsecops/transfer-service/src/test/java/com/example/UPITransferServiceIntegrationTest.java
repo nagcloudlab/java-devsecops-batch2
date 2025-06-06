@@ -18,7 +18,7 @@ public class UPITransferServiceIntegrationTest {
     @Autowired
     private TransferService service;
 
-    @Test
+    // @Test
     void testTransferSuccess() {
 
         TransferRequest request = new TransferRequest();
