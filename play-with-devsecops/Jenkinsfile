@@ -51,16 +51,16 @@ pipeline {
                 }
             }
         }
-        post {
-                success {
-                    echo '✅ Build completed successfully!'
-                }
-                failure {
-                    echo '❌ Build failed. Check logs for details.'
-                }
-                always {
-                    echo '📦 Pipeline execution finished.'
-                }
+    }
+    post {
+            success {
+                echo '✅ Build completed successfully!'
+            }
+            failure {
+                echo '❌ Build failed. Check logs for details.'
+            }
+            always {
+                echo '📦 Pipeline execution finished.'
             }
         }
-}
+    }
