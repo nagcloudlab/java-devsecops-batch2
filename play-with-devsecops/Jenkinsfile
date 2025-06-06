@@ -39,7 +39,7 @@ pipeline {
                 echo 'Archiving test and analysis reports...'
                 dir('play-with-devsecops') {
                     junit '**/target/surefire-reports/*.xml'
-                    archiveArtifacts artifacts: '**/target/spotbugsXml.xml', fingerprint: true
+                    archiveArtifacts artifacts: '**/target/**', fingerprint: true
                 }
             }
         }
