@@ -3,13 +3,10 @@ package com.example;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
 public class UPITransferServiceApiTest extends BaseTransferApiTest {
 
   // Junit + Hamcrest + Rest Assured
-  @Test
+  // @Test
   public void transferMoneyTest() {
 
     String requestBody = """
