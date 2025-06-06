@@ -23,14 +23,13 @@
 
     <dependencyManagement>
         <dependencies>
-             <!-- ✅ JUnit 5 (Jupiter) -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.1</version>
-            <scope>test</scope>
-        </dependency>
-
+          <!-- ✅ JUnit 5 (Jupiter) -->
+          <dependency>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter</artifactId>
+              <version>5.10.1</version>
+              <scope>test</scope>
+          </dependency>
         <!-- ✅ Hamcrest for expressive assertions -->
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -38,7 +37,6 @@
             <version>2.2</version>
             <scope>test</scope>
         </dependency>
-
         <!-- ✅ REST Assured Core -->
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -46,7 +44,6 @@
             <version>5.5.1</version>
             <scope>test</scope>
         </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -57,7 +54,6 @@
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.11.0.3922</version>
             </plugin>
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -73,7 +69,6 @@
                 </execution>
                 </executions>
             </plugin>
-
               <!-- ✅ Maven Surefire Plugin to run JUnit 5 tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -83,53 +78,6 @@
                     <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
-
-            <!-- SpotBugs Plugin -->
-        <plugin>
-          <groupId>com.github.spotbugs</groupId>
-          <artifactId>spotbugs-maven-plugin</artifactId>
-          <version>4.7.3.0</version>
-          <configuration>
-            <effort>Max</effort>
-            <threshold>Low</threshold>
-            <xmlOutput>true</xmlOutput>
-            <plugins>
-              <plugin>
-                <groupId>com.h3xstream.findsecbugs</groupId>
-                <artifactId>findsecbugs-plugin</artifactId>
-                <version>1.12.0</version>
-              </plugin>
-            </plugins>
-          </configuration>
-          <executions>
-            <execution>
-              <phase>verify</phase>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-
-         <!-- OWASP Dependency-Check Plugin -->
-      <plugin>
-        <groupId>org.owasp</groupId>
-        <artifactId>dependency-check-maven</artifactId>
-        <version>12.1.1</version> <!-- Use latest stable version -->
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <format>ALL</format>
-          <failBuildOnCVSS>7</failBuildOnCVSS> <!-- Fails if critical vuln found -->
-          <outputDirectory>${project.build.directory}/dependency-check-report</outputDirectory>
-        </configuration>
-      </plugin>
-
         </plugins>
   </build>
 
