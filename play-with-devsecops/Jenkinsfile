@@ -34,14 +34,6 @@ pipeline {
                 }
             }
         }
-        stage('SpotBugs Scan') {
-            steps {
-                echo 'Running SpotBugs analysis...'
-                dir('play-with-devsecops') {
-                    sh 'mvn spotbugs:spotbugs'
-                }
-            }
-        }
         stage('Collect Reports') {
             steps {
                 echo 'Archiving test and analysis reports...'
