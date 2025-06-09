@@ -16,5 +16,13 @@ pipeline{
                 }
             }
         }
+        stage("docker-push"){
+            steps{
+                dir('docker-k8s/services/java-web-service'){
+                    sh 'docker tag java-web-service:latest docker.io/nagabhushanamn/java-web-service:latest'
+                    sh 'docker push docker.io/nagabhushanamn/java-web-service:latest'
+                }
+            }
+        }
     }
 }
