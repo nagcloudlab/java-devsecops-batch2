@@ -24,5 +24,12 @@ pipeline{
                 }
             }
         }
+        stage("deploy"){
+            steps{
+                dir('docker-k8s/services/java-web-service'){
+                    input message: 'Deploy to myVM?', ok: 'Deploy'
+                }
+            }
+        }
     }
 }
