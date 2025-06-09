@@ -1,7 +1,22 @@
 pipeline {
     agent any
 
+    environment {
+        foo = 'bar'
+    }
+
     stages {
+
+        stage('Clear Previous Builds') {
+            steps {
+                echo 'Clearing previous builds...'
+                dir('play-with-devsecops') {
+                    sh 'rm -rf target/*'
+                }
+                echo 'Previous builds cleared.'
+            }
+        }
+
         stage('Prepare Workspace') {
             steps {
                 echo 'Preparing workspace...'
@@ -28,6 +43,7 @@ pipeline {
         }
         stage('Package') {
             steps {
+                input message: 'Do you want to proceed with packaging?', ok: 'Yes, package it!'
                 echo 'Packaging the project...'
                 dir('play-with-devsecops') {
                     sh 'mvn install'
