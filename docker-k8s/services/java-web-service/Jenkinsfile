@@ -2,11 +2,19 @@
 pipeline{
     agent any
     stages{
-        stage("A"){
+        stage("java-build"){
             steps{
-                echo "========executing A========"
+                dir('docker-k8s/services/java-web-service'){
+                    sh 'mvn clean package'
+                }
             }
-           
+        }
+        stage("docker-build"){
+            steps{
+                dir('docker-k8s/services/java-web-service'){
+                    sh 'docker build -t java-web-service .'
+                }
+            }
         }
     }
 }
